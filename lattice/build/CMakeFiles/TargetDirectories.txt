@@ -1,0 +1,3 @@
+/home/neel/lattice/build/CMakeFiles/lattice_test.dir
+/home/neel/lattice/build/CMakeFiles/edit_cache.dir
+/home/neel/lattice/build/CMakeFiles/rebuild_cache.dir
