@@ -16,3 +16,4 @@ make -j
 Note: Tests may take a few minutes to run due to heavy mathematical operations.
 
 Note: MacOS and Windows may not run this code so please use a Linux OS or Linux Virtual Machine with Sufficient Resources.
+Note: This code has not been audited so please do not use in production systems as is, as it may contain bugs.
