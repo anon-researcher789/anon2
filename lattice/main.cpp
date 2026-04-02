@@ -11,9 +11,7 @@
 #include "sha256.h"
 #include "sha512.h"
 #include "small_512.h"
-// ------------------------------------------------------------
 // Helpers
-// ------------------------------------------------------------
 EncodedPoly make_test_poly(int32_t base) {
     EncodedPoly f;
     f.p.coeffs.fill(0);
@@ -25,10 +23,7 @@ std::array<uint8_t, params::seed_bytes> make_seed(uint8_t v) {
     seed.fill(v);
     return seed;
 }
-
-// ------------------------------------------------------------
 // Tests
-// ------------------------------------------------------------
 void test_keygen_determinism() {
     auto seed = make_seed(42);
 
@@ -38,7 +33,7 @@ void test_keygen_determinism() {
     assert(*ck1.A == *ck2.A);
     assert(*ck1.G == *ck2.G);
     assert(*ck1.T == *ck2.T);
-
+// for reproducability
     std::cout << "[OK] Deterministic key generation\n";
 }
 
@@ -161,9 +156,7 @@ std::vector<int64_t> make_sha512_witness(const SHA512Circuit& c) {
 }
 
 
-// ------------------------------------------------------------
 // Main
-// ------------------------------------------------------------
 int main() {
     std::cout << "Running lattice commitment tests...\n";
 
